@@ -2,13 +2,23 @@ import React from "react";
 import "./DailyForecast.scss";
 
 const DailyForecast = ({ data }) => {
-  // Функция для получения данных за текущий день с интервалом в 3 часа
+  // Функция для получения данных за текущий день
   const getTodayForecast = (list) => {
     const today = new Date().toISOString().split("T")[0]; // Получаем текущую дату в формате YYYY-MM-DD
-    return list.filter((item) => item.dt_txt.startsWith(today)); // Фильтруем данные по текущей дате
+    const todayData = list.filter((item) => item.dt_txt.startsWith(today)); // Фильтруем данные по текущей дате
+
+    // Если данных за текущий день нет, берем данные за следующий день
+    if (todayData.length === 0) {
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      const tomorrowDate = tomorrow.toISOString().split("T")[0];
+      return list.filter((item) => item.dt_txt.startsWith(tomorrowDate));
+    }
+
+    return todayData;
   };
 
-  // Получаем данные за текущий день
+  // Получаем данные за текущий день (или следующий, если данных за текущий день нет)
   const todayForecast = getTodayForecast(data.list);
 
   return (
@@ -19,7 +29,7 @@ const DailyForecast = ({ data }) => {
             hour: "2-digit",
             minute: "2-digit",
           }); // Форматируем время
-          const temp = Math.round(item.main.temp); 
+          const temp = Math.round(item.main.temp);
           const iconUrl = `/icons/${item.weather[0].icon}.png`; // URL иконки погоды
 
           return (
