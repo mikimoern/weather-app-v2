@@ -13,7 +13,10 @@ const Header = ({ onSearchChange, resetSearch }) => {
         </a>
         <Search onSearchChange={onSearchChange} resetSearch={resetSearch} />
         <div className="nav__switching">
-          <a href="/" className="nav__save">
+          <a
+            href="https://github.com/mikimoern/weather-app-v2"
+            className="nav__save"
+          >
             <Github />
             Github
           </a>

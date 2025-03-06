@@ -29,7 +29,7 @@ const fetchForecast = async (lat, lon) => {
 
 const fetchAirPollution = async (lat, lon) => {
   const response = await fetch(
-    `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}`
+    `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}`
   );
   return response.json();
 };
