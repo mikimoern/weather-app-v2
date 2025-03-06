@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 10px;
+  background-color: var(--card-background);
+  padding: 15px;
+
+  span {
+    font-size: 20px;
+    color: var(--primary);
+  }
+}

@@ -1,0 +1,30 @@
+.default-city {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--card-background);
+  h4 {
+    padding-bottom: 20px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+}
+
+.default-city__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  li {
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+  }
+
+  li:hover {
+  cursor: pointer;
+  background-color: var(--on-surface-variant);
+  }
+}
+

@@ -1,0 +1,25 @@
+.daily-forecast {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--card-background);
+  transition: var(--transition-short);
+}
+
+.daily-forecast:hover {
+  cursor: pointer;
+  background-color: var(--on-surface-variant);
+}
+
+.daily-forecast__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.daily-forecast__list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}

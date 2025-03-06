@@ -1,0 +1,27 @@
+.current-temp {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--card-background);
+  transition: var(--transition-short);
+}
+
+.current-temp:hover {
+  cursor: pointer;
+  background-color: var(--on-surface-variant);
+}
+
+.current-temp__date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.current-temp__temp {
+  font-size: 96px;
+  text-align: center;
+}
+
+.current-temp__wrap {
+  display: flex;
+  gap: 20px;
+}

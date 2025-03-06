@@ -1,0 +1,46 @@
+.forecast {
+  padding: 20px 20px 35px 20px;
+  border-radius: 10px;
+  background-color: var(--card-background);
+  transition: var(--transition-short);
+}
+
+.forecast:hover {
+  cursor: pointer;
+  background-color: var(--on-surface-variant);
+}
+
+.forecast__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.forecast__temp {
+  padding-top: 5px;
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid grey;
+}
+
+.forecast__temp-day {
+    font-size: 20px;
+}
+
+.forecast__temp-title,
+.forecast__temp-cel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forecast__temp-cel {
+  gap: 10px;
+}
+
+
+.forecast__temp-progressbar {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, hsla(197, 100%, 63%, 1) 0%, hsla(58, 100%, 68%, 1) 50%, hsla(33, 100%, 53%, 1) 100%);
+}

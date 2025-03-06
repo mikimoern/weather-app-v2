@@ -1,0 +1,39 @@
+.sunset {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--card-background);
+  transition: var(--transition-short);
+}
+
+.sunset:hover {
+  cursor: pointer;
+  background-color: var(--on-surface-variant);
+}
+
+.sunset__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  h4 {
+    font-size: 18px;
+  }
+}
+
+.sunrise-sunset__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  padding: 10px;
+}
+
+.sunrise-sunset__list {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+
+  p {
+    font-size: 20px;
+  }
+}

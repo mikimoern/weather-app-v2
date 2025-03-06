@@ -1,0 +1,35 @@
+.feels-like {
+  padding: 12px 20px;
+  border-radius: 10px;
+  background-color: var(--card-background);
+  transition: var(--transition-short);
+
+  span {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  @media (max-width: 1024px) {
+    padding: 12px;
+  }
+}
+
+.feels-like:hover {
+  cursor: pointer;
+  background-color: var(--on-surface-variant);
+}
+
+.feels-like__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  h4 {
+    font-size: 18px;
+  }
+}
+
+.feels-like__temp {
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+}

@@ -1,0 +1,9 @@
+.map-box {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--card-background);
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+}
