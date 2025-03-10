@@ -32,7 +32,7 @@ const Forecast = ({ data }) => {
 
   // Получаем данные за следующие 5 дней
   const forecastData = Object.keys(groupedData)
-    .slice(0, 5)
+    .slice(1, 6)
     .map((date) => {
       const dayData = groupedData[date];
       const { minTemp, maxTemp } = getMinMaxTemp(dayData);

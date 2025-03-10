@@ -33,7 +33,7 @@ const DailyForecast = ({ data }) => {
           const iconUrl = `/icons/${item.weather[0].icon}.png`; // URL иконки погоды
 
           return (
-            <li className="daily-forecast__item" key={index}>
+            <li className="daily-forecast__item" key={item.dt}>
               <span>{time}</span>
               <img src={iconUrl} alt={item.weather[0].description} width="40" />
               <p>{temp}°C</p>
@@ -46,3 +46,4 @@ const DailyForecast = ({ data }) => {
 };
 
 export default DailyForecast;
+
